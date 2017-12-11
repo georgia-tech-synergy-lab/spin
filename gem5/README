@@ -1,0 +1,18 @@
+SPIN scheme usage :
+
+replace $sim_path, $ir (injection rate), $traffic_pattern with appropriate values.
+
+1. Deadlock Avoidance in Dragon-fly :
+/nethome/aramrakhyani3/spin/gem5/build/Garnet_standalone/gem5.debug -d '.$sim_path.' /nethome/aramrakhyani3/spin/gem5/configs/example/garnet_synth_traffic.py --network=garnet2.0 --num-cpus=1024 --num-dirs=1 --topology=dragonfly --dfly-group-size=4 --sim-cycles=20000 --injectionrate='.$ir.' --synthetic='.$traffic_pattern.' --enable-spin-scheme=0 --dd-thresh=128 --routing-algorithm=ugal --max-turn-capacity=30 --enable-variable-dd=1 --vcs-per-vnet=3 --enable-dfly-dlock-avoidance=1 > /usr/scratch/temp.txt
+
+2. Spin with Dragon-fly
+/nethome/aramrakhyani3/spin/gem5/build/Garnet_standalone/gem5.debug -d '.$sim_path.' /nethome/aramrakhyani3/spin/gem5/configs/example/garnet_synth_traffic.py --network=garnet2.0 --num-cpus=1024 --num-dirs=1 --topology=dragonfly --dfly-group-size=8 --sim-cycles=20000 --injectionrate='.$ir.' --synthetic='.$traffic_pattern.' --enable-spin-scheme=1 --dd-thresh=128 --routing-algorithm=table --max-turn-capacity=50 --enable-variable-dd=0 --vcs-per-vnet=1 --enable-rotating-priority=1 --enable-dfly-dlock-avoidance=0 
+
+3. Spin with Mesh
+/nethome/aramrakhyani3/spin/gem5/build/Garnet_standalone/gem5.debug -d '.$sim_path.' /nethome/aramrakhyani3/spin/gem5/configs/example/garnet_synth_traffic.py --network=garnet2.0 --num-cpus=64 --num-dirs=1 --topology=Mesh --mesh-rows=8 --sim-cycles=20000 --injectionrate='.$ir.' --synthetic='.$traffic_pattern.' --enable-spin-scheme=1 --dd-thresh=128 --routing-algorithm=ugal --max-turn-capacity=40 --enable-variable-dd=0 --vcs-per-vnet=2 --enable-rotating-priority=1 --enable-escape-vc=0 
+
+4. For using escape-vc with mesh, --enable-escape-vc=1. Escape-vc with dragon-fly is not defined.
+
+5. using --routing-algorithm=ugal with --vcs-per-vnet=1 will use the FAvORS routing algo. For mesh 
+topology it will use only the minimal paths adaptively. For dragon-fly, it will choose between 
+minimal adaptive and non-minimal adaptive.

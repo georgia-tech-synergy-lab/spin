@@ -1,0 +1,36 @@
+
+packets_injected = 34582                      
+packets_received = 33891                      
+average_packet_queueing_latency = 7366.154289                      
+average_packet_network_latency = 382.493700                      
+average_packet_latency = 7748.647989                      
+flits_injected = 73782                      
+flits_received = 73048                      
+average_flit_queueing_latency = 7758.764634                      
+average_flit_network_latency = 201.942586                      
+average_flit_latency = 7960.707220                      
+average_hops = 5.180347                      
+total_probes_sent = 16753                      
+total_move_sent = 69                      
+total_kill_move_sent = 69                      
+total_check_probe_sent = 52                      
+total_probes_dropped = 61839                      
+total_move_dropped = 17                      
+total_kill_move_dropped = 0                      
+total_check_probe_dropped = 52                      
+total_spins = 52                      
+total_spin_cycles = 104                      
+network_max_spin_cycles = 2                      
+network_max_deadlock_path_length = 28                      
+network_deadlock_path_length_sum = 766                      
+probe_link_utilisation = 260585                      
+system.ruby.network.check_probe_link_utilisation          173                      
+move_link_utilisation = 934                      
+system.ruby.network.kill_move_link_utilisation         1154                      
+kill_move_link_utilisation = 1154                      
+check_probe_link_utilisation = 173                      
+flit_link_utilisation = 526851                      
+system.ruby.network.ext_in_link_utilization        73772                      
+system.ruby.network.ext_out_link_utilization        73052                      
+system.ruby.network.int_link_utilization       642873                      
+system.ruby.network.avg_link_utilization    39.484850                      
