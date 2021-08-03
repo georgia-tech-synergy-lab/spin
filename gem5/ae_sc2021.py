@@ -6,24 +6,24 @@ binary = 'build/Garnet_standalone/gem5.opt'
 os.system("scons -j15 {}".format(binary))
 
 
-# bench_caps=[ "BIT_ROTATION", "SHUFFLE", "TRANSPOSE" ]
-# bench=[ "bit_rotation", "shuffle", "transpose" ]
-bench_caps=[ "BIT_ROTATION" ]
-bench=[ "bit_rotation" ]
+bench_caps=[ "BIT_ROTATION", "SHUFFLE", "TRANSPOSE" ]
+bench=[ "bit_rotation", "shuffle", "transpose" ]
+# bench_caps=[ "BIT_ROTATION" ]
+# bench=[ "bit_rotation" ]
 
 routing_algorithm=["ADAPT_RAND_", "UP_DN_", "Escape_VC_UP_DN_"]
 
-# num_cores = [64, 256]
-# num_rows = [8, 16]
+num_cores = [64, 256]
+num_rows = [8, 16]
 
-num_cores = [64]
-num_rows = [8]
+# num_cores = [64]
+# num_rows = [8]
 
 os.system('rm -rf ./results')
 os.system('mkdir results')
 
 out_dir = './results'
-cycles = 1000
+cycles = 10000
 vnet = 0
 tr = 1
 vc_ = 4
