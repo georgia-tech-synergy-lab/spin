@@ -19,6 +19,8 @@ Under gem5/
 ### How to run ###
 
 * See gem5/README
+* A handy (approx.) script for saturation throughtput gem5/sat_thrpt.py
+* To run: python sat_thrpt.py
 
 ### Developer ###
 
