@@ -12,6 +12,10 @@ In Proc of 45th International Symposium on Computer Architecture (ISCA), Jun 201
 	Paper: http://synergy.ece.gatech.edu/wp-content/uploads/sites/332/2018/04/spin_isca2018.pdf
 
 
+### How to build ###
+Under gem5/
+* scons -j15 scons/Garnet_standalone/gem5.opt
+
 ### How to run ###
 
 * See gem5/README
