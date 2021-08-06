@@ -14,7 +14,7 @@ In Proc of 45th International Symposium on Computer Architecture (ISCA), Jun 201
 
 ### How to build ###
 Under gem5/
-* scons -j15 scons/Garnet_standalone/gem5.opt
+* scons -j 15 build/Garnet_standalone/gem5.opt
 
 ### How to run ###
 
